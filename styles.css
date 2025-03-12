@@ -1,0 +1,221 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+/* ---------------------------------------------------------------------
+All styles written by: Ryan Tan Yang Heng
+Target Browsers: All
+Best used on medium screen sizes and above  
+------------------------------------------------------------------------ */
+
+/*** Google Font ***/
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*** Global CSS Reset ***/
+* {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+/*** Design Palette ***/
+:root {
+    /* colors */
+    --light-green: rgb(208, 208, 192);
+    --black: rgb(0, 0, 0);
+    --light-blue: rgb(111, 178, 201);
+    --red-digit: rgb(163, 19, 19);
+    --dark-grayish-blue: rgb(59, 67, 75);
+    --line-blue: rgb(49, 55, 61);
+    --orange: rgb(241, 168, 98);
+    --white: rgba(255, 255, 255, 0.872);
+}
+
+/*** Body Section ***/
+body {
+    width: 100vw;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+/*** Calculator ***/
+.calculator {
+    width: 300px;
+    height: 500px;
+    -webkit-box-shadow: 
+        rgba(0, 0, 0, 0.25) 0px 54px 55px, 
+        rgba(0, 0, 0, 0.12) 0px -12px 30px, 
+        rgba(0, 0, 0, 0.12) 0px 4px 6px, 
+        rgba(0, 0, 0, 0.17) 0px 12px 13px,
+        rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            box-shadow: 
+        rgba(0, 0, 0, 0.25) 0px 54px 55px, 
+        rgba(0, 0, 0, 0.12) 0px -12px 30px, 
+        rgba(0, 0, 0, 0.12) 0px 4px 6px, 
+        rgba(0, 0, 0, 0.17) 0px 12px 13px,
+        rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border-radius: 1rem;
+    overflow: hidden;
+    background-color: var(--light-green);
+    border: 15px solid var(--light-green);
+    border-top: 50px solid var(--light-green);
+}
+
+/*** Display Screen ***/
+.display {  
+    padding: 0.5rem;
+    height: 5rem;
+    border-top-right-radius: calc(0.6rem);
+    border-top-left-radius: calc(0.6rem);
+    background-color: black;
+    color: var(--red-digit);
+    font-family: "Orbitron", sans-serif;
+    letter-spacing: 0.2rem;
+}
+
+.expression-display {
+    text-align: end;
+    width: 100%;
+    font-size: 1.5rem;
+    height:-webkit-fit-content;
+    height:-moz-fit-content;
+    height:fit-content;
+}
+
+.solution-display {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    padding-left: 0.5rem !important;
+}
+
+p#equal-sign-display {
+    font-size: 1rem;
+}
+
+.small {
+    -webkit-transition: 0.1s ease;
+    -o-transition: 0.1s ease;
+    transition: 0.1s ease;
+    font-size: 1rem;
+}
+
+/*** Logo Section ***/
+.logo-section {
+    padding: 10px 40px 7px;
+    border-bottom: 3px solid var(--line-blue);
+    background-color: var(--dark-grayish-blue);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+
+.logo-section img {
+    width: 20px;
+}
+
+.logo-section p {
+    color: var(--light-green);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+/*** Key Section ***/
+section.keys-section {
+    padding: 10px 20px 20px;
+    background-color: var(--dark-grayish-blue);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 10px;
+}
+
+.keys-section > .button {
+    width: 50px;
+    height: 50px;
+    background-color: var(--light-green);
+    border: none;
+    border-radius: 3px;
+    -webkit-box-shadow: 
+        rgba(0, 0, 0, 0.4) 0px 2px 4px, 
+        rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+        rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+            box-shadow: 
+        rgba(0, 0, 0, 0.4) 0px 2px 4px, 
+        rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+        rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    font-size: 1.3rem;
+    color: var(--dark-grayish-blue);
+}
+
+.keys-section > .button:active {
+    -webkit-box-shadow: 
+        rgba(0, 0, 0, 0.6) 0px 2px 4px, 
+        rgba(0, 0, 0, 0.5) 0px 7px 13px -3px, 
+        rgba(0, 0, 0, 0.4) 0px -3px 0px inset;
+            box-shadow: 
+        rgba(0, 0, 0, 0.6) 0px 2px 4px, 
+        rgba(0, 0, 0, 0.5) 0px 7px 13px -3px, 
+        rgba(0, 0, 0, 0.4) 0px -3px 0px inset;
+    -webkit-transform: translateY(2px);
+        -ms-transform: translateY(2px);
+            transform: translateY(2px);
+}
+
+.spacing {
+    background-color: inherit !important;
+}
+
+.number {
+    background-color: var(--white) !important;
+}
+
+.long {
+    width: 78px !important;
+}
+
+button#equate {
+    background-color: var(--orange);
+}

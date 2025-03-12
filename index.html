@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Include mathjs from a CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.4.0/math.js"></script>
+    <!-- Font Awesome CDN -->
+    <script src="https://kit.fontawesome.com/517e100b5b.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="calculator">
+        <div class="display">
+            <div class="expression-display">
+                <p id="expression-output">0</p>
+            </div>
+            <div class="solution-display">
+                <p id="equal-sign-display"></p>
+                <p id="solution-output"></p>
+            </div>
+        </div>
+        <div class="logo-section">
+            <img src="assets/img/Calculator Logo.svg" alt="">
+            <p>Calculator</p>
+        </div>
+        <section class="keys-section">
+            <!-- Row 1 -->
+            <button id="ac" class="button">AC</button>
+            <button class="operator key button" id="modulus" data-key="%">%</button>
+            <button class="operator key button" id="multiply" data-key="*">×</button>
+            <button id="delete" class="button" data-key="del"><i class="fa-solid fa-delete-left"></i></button>
+            
+            <!-- Row 2 -->
+            <button class="number key button" id="seven" data-key="7">7</button>
+            <button class="number key button" id="eight" data-key="8">8</button>
+            <button class="number key button" id="nine" data-key="9">9</button>
+            <button class="operator key button" id="divide" data-key="/">÷</button>
+            
+            <!-- Row 3 -->
+            <button class="number key button" id="four" data-key="4">4</button>
+            <button class="number key button" id="five" data-key="5">5</button>
+            <button class="number key button" id="six" data-key="6">6</button>
+            <button class="operator key button" id="subtract" data-key="-">-</button>
+
+            <!--- Row 4 -->
+            <button class="number key button" id="one" data-key="1">1</button>
+            <button class="number key button" id="two" data-key="2">2</button>
+            <button class="number key button" id="three" data-key="3">3</button>
+            <button class="operator key button" id="add" data-key="+">+</button>
+            
+            <!-- Row 5 -->
+            <button class="long number key button" id="zero" data-key="0">0</button>
+            <button class="number key button" id="decimal" data-key=".">.</button>
+            <button id="equate" class="long button" data-key="=">=</button>
+        </section>
+    </div><!-- Calculator End -->
+
+    <div class="box-shadow"></div>
+    <script src="scripts.js"></script>
+</body>
+</html>
